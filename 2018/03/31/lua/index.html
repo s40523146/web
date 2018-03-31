@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>lua practice | 我的學習日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="字串12345678&amp;gt;print(&apos;aabbcc&apos;)aabbcc&amp;gt;print(&quot;aabbcc&quot;)aabbcc&amp;gt;print([[aabbcc]])aabbcc&amp;gt;print([=aabbcc=])aabbcc 賦值12&amp;gt;a,b,c,d = ture，false，1，1&amp;lt;2print(a，b，c，d)=ture，false，1，ture 比較1234&amp;gt;print">
+<meta name="keywords" content="lua">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lua practice">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/03/31/lua/index.html">
+<meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="字串12345678&amp;gt;print(&apos;aabbcc&apos;)aabbcc&amp;gt;print(&quot;aabbcc&quot;)aabbcc&amp;gt;print([[aabbcc]])aabbcc&amp;gt;print([=aabbcc=])aabbcc 賦值12&amp;gt;a,b,c,d = ture，false，1，1&amp;lt;2print(a，b，c，d)=ture，false，1，ture 比較1234&amp;gt;print">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-03-31T15:50:49.319Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="lua practice">
+<meta name="twitter:description" content="字串12345678&amp;gt;print(&apos;aabbcc&apos;)aabbcc&amp;gt;print(&quot;aabbcc&quot;)aabbcc&amp;gt;print([[aabbcc]])aabbcc&amp;gt;print([=aabbcc=])aabbcc 賦值12&amp;gt;a,b,c,d = ture，false，1，1&amp;lt;2print(a，b，c，d)=ture，false，1，ture 比較1234&amp;gt;print">
+  
+    <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/web/css/tocas.css">
+  <link rel="stylesheet" href="/web/css/animate.css">
+  <link rel="stylesheet" href="/web/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #5e5d5d;
+    }
+
+    #menu-color-id a{
+        color: #fffcfc;
+    }
+  </style>
+  <script src="/web/js/tocas.js"></script>
+  
+
+</head>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/web/">首頁</a>
+        
+            <a class="item" href="/web/archives">檔案</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #49e5d5;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">我的學習日誌</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">lua practice</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/2/31 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/lua/">lua</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <h2 id="字串"><a href="#字串" class="headerlink" title="字串"></a>字串</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">print</span>(<span class="string">'aabbcc'</span>)</span><br><span class="line">aabbcc</span><br><span class="line">&gt;<span class="built_in">print</span>(<span class="string">"aabbcc"</span>)</span><br><span class="line">aabbcc</span><br><span class="line">&gt;<span class="built_in">print</span>([[aabbcc]])</span><br><span class="line">aabbcc</span><br><span class="line">&gt;<span class="built_in">print</span>([=aabbcc=])</span><br><span class="line">aabbcc</span><br></pre></td></tr></table></figure>
+<h2 id="賦值"><a href="#賦值" class="headerlink" title="賦值"></a>賦值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;a,b,c,d = ture，<span class="literal">false</span>，1，1&lt;2</span><br><span class="line"><span class="built_in">print</span>(a，b，c，d)=ture，<span class="literal">false</span>，1，ture</span><br></pre></td></tr></table></figure>
+<h2 id="比較"><a href="#比較" class="headerlink" title="比較"></a>比較</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">print</span>(1==1)</span><br><span class="line">ture</span><br><span class="line">&gt;<span class="built_in">print</span>(1~=1)</span><br><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="nil空"><a href="#nil空" class="headerlink" title="nil空"></a>nil空</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;a，b，c，d=1，2</span><br><span class="line">a，b，c，d=1，2，nil，nil</span><br></pre></td></tr></table></figure>
+<h2 id="邏輯判斷"><a href="#邏輯判斷" class="headerlink" title="邏輯判斷"></a>邏輯判斷</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(1 and 1)</span><br><span class="line">1</span><br><span class="line"><span class="built_in">print</span>(1 or nil)</span><br><span class="line">1</span><br><span class="line"><span class="built_in">print</span>(not nil)</span><br><span class="line">ture</span><br></pre></td></tr></table></figure>
+<h2 id="字串連結"><a href="#字串連結" class="headerlink" title="字串連結"></a>字串連結</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">print</span>(<span class="string">"hello"</span>..<span class="string">"world"</span>)</span><br><span class="line">helloworld</span><br></pre></td></tr></table></figure>
+<h2 id="計算長度"><a href="#計算長度" class="headerlink" title="計算長度"></a>計算長度</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="comment">#"hello")</span></span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<h2 id="註解"><a href="#註解" class="headerlink" title="註解"></a>註解</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--說明程式</span><br><span class="line">快捷鍵:contrl+/</span><br></pre></td></tr></table></figure>
+<h2 id="if條件式"><a href="#if條件式" class="headerlink" title="if條件式"></a>if條件式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 1==1 <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"yes"</span>)</span><br><span class="line">end</span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<h2 id="while條件式"><a href="#while條件式" class="headerlink" title="while條件式"></a>while條件式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 1==2 <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"never print"</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="for迴圈"><a href="#for迴圈" class="headerlink" title="for迴圈"></a>for迴圈</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i = 1,3 <span class="keyword">do</span></span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line">end</span><br><span class="line">1 2 3</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i = 1,10,2 <span class="keyword">do</span></span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line">end</span><br><span class="line">1 3 5 7 9</span><br></pre></td></tr></table></figure>
+<h2 id="repeat迴圈-至少執行一次"><a href="#repeat迴圈-至少執行一次" class="headerlink" title="repeat迴圈(至少執行一次)"></a>repeat迴圈(至少執行一次)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repeat <span class="built_in">print</span> (<span class="string">"yes"</span>) until 1&lt;10 </span><br><span class="line">yes</span><br></pre></td></tr></table></figure>
+<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i = 1,10 <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> i&gt;5 <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">        end</span><br><span class="line"><span class="built_in">print</span>(i)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">1,2,3,4,5</span><br></pre></td></tr></table></figure>
+<h2 id="呼叫函式"><a href="#呼叫函式" class="headerlink" title="呼叫函式"></a>呼叫函式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="built_in">test</span>()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"a"</span>)</span><br><span class="line">    end</span><br><span class="line"><span class="built_in">test</span>()</span><br><span class="line"></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://morgan-hexo-theme.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="/web/2018/03/31/week1234/" class="styled-border">
+                    ←
+                    week 1234
+                    
+                </a>
+            
+            
+                <a href="/web/2018/03/31/week5/" class="styled-border">
+                    
+                    week5
+                    →
+                </a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["Hello, this is my blog","歡迎來到謝秉軒的網誌"];
+</script>
+<script src="/web/js/script.js"></script>
+</body>
+</html>
