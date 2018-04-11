@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arduino 紅綠燈呼吸燈練習 | 我的學習日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="呼吸燈123456789101112131415int brightness = 0; int increase = 5;void setup () &amp;#123;  pinMode(3,OUTPUT);&amp;#125;void loop () &amp;#123;  analogWrite(3,brightness);  brightness = brightness + increase;  if (bri">
+<meta name="keywords" content="Arduino">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino 紅綠燈呼吸燈練習">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/11/Arduino1/index.html">
+<meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="呼吸燈123456789101112131415int brightness = 0; int increase = 5;void setup () &amp;#123;  pinMode(3,OUTPUT);&amp;#125;void loop () &amp;#123;  analogWrite(3,brightness);  brightness = brightness + increase;  if (bri">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://4.bp.blogspot.com/-jZoIOL9974A/U3TaUXi1Z5I/AAAAAAAAAV0/2_m6rX3LHBw/s1600/duty_cycle.JPG">
+<meta property="og:image" content="http://c.biancheng.net/cpp/uploads/allimg/140316/1-1403161Z633114.png">
+<meta property="og:image" content="http://www.pcstar.com.tw/blog/wp-content/uploads/2013/08/3-45.jpg">
+<meta property="og:updated_time" content="2018-04-11T10:05:19.875Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arduino 紅綠燈呼吸燈練習">
+<meta name="twitter:description" content="呼吸燈123456789101112131415int brightness = 0; int increase = 5;void setup () &amp;#123;  pinMode(3,OUTPUT);&amp;#125;void loop () &amp;#123;  analogWrite(3,brightness);  brightness = brightness + increase;  if (bri">
+<meta name="twitter:image" content="http://4.bp.blogspot.com/-jZoIOL9974A/U3TaUXi1Z5I/AAAAAAAAAV0/2_m6rX3LHBw/s1600/duty_cycle.JPG">
+  
+    <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/web/css/tocas.css">
+  <link rel="stylesheet" href="/web/css/animate.css">
+  <link rel="stylesheet" href="/web/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #5e5d5d;
+    }
+
+    #menu-color-id a{
+        color: #fffcfc;
+    }
+  </style>
+  <script src="/web/js/tocas.js"></script>
+  
+
+</head>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/web/">首頁</a>
+        
+            <a class="item" href="/web/archives">文章</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #49e5d5;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">我的學習日誌</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">Arduino 紅綠燈呼吸燈練習</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/11 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <h1 id="呼吸燈"><a href="#呼吸燈" class="headerlink" title="呼吸燈"></a>呼吸燈</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int brightness = 0; </span><br><span class="line">int increase = 5;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">setup</span></span> () &#123;</span><br><span class="line">  pinMode(3,OUTPUT);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span> () &#123;</span><br><span class="line">  analogWrite(3,brightness);</span><br><span class="line">  brightness = brightness + increase;</span><br><span class="line">  <span class="keyword">if</span> (brightness&lt;=0 || brightness&gt;=225)&#123;</span><br><span class="line">    increase = -increase;</span><br><span class="line">  &#125;</span><br><span class="line">delay(30);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&gt; analogWrite(pin,value)<br>analogWrite()函數用于给 PWM 口写入一个 0~255 的模擬值。特别注意的是，<br>analogWrite()函數只能寫入具有 PWM 功能的數字引脚。<br>Arduino引腳具有PWM功能的引腳會有”~”的標誌<br>脈波寬度調變，簡稱脈寬調變，是將類比訊號轉換為脈波的一種技術，一般轉換後脈波的週期固定，但脈波的占空比會依類比訊號的大小而改變。<br>下圖為duty cycle為50%,75%與25%的波形，可以發現duty cycle越大，Pulse佔它的周期時間越長。背光亮度就是透過duty cycle調整，duty cycle越大，高度就越高<br><img src="http://4.bp.blogspot.com/-jZoIOL9974A/U3TaUXi1Z5I/AAAAAAAAAV0/2_m6rX3LHBw/s1600/duty_cycle.JPG" alt="IMAGE OF PWM"></p>
+<h1 id="互動紅綠燈"><a href="#互動紅綠燈" class="headerlink" title="互動紅綠燈"></a>互動紅綠燈</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">  int carred = 12;</span><br><span class="line">  int caryellow = 11;</span><br><span class="line">  int cargreen = 10;</span><br><span class="line">  int button = 9;</span><br><span class="line">  int red = 8;</span><br><span class="line">  int green = 7;</span><br><span class="line">  unsigned long changeTime; </span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(carred,OUTPUT);</span><br><span class="line">  pinMode(caryellow,OUTPUT);</span><br><span class="line">  pinMode(cargreen,OUTPUT);</span><br><span class="line">  pinMode(button,INPUT);</span><br><span class="line">  pinMode(red,OUTPUT);</span><br><span class="line">  pinMode(green,OUTPUT);</span><br><span class="line">  digitalWrite(cargreen,HIGH); //設定初始燈泡</span><br><span class="line">  digitalWrite(red,HIGH); //設定初始燈泡</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;  --主程式</span><br><span class="line">  int status = digitalRead(button); //status是讀取按鈕狀態</span><br><span class="line">        <span class="keyword">if</span>(state == HIGH &amp;&amp; (millis() - changeTime)&gt; 5000)&#123;</span><br><span class="line">               changelight();  //如果botton是HIGH和changTime小於5000呼叫副程式changlight</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">void <span class="function"><span class="title">changelight</span></span>() &#123;</span><br><span class="line">  digitalWrite(cargreen,LOW);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(caryellow,HIGH);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(caryellow,LOW);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(carred,HIGH);</span><br><span class="line">  delay(500);</span><br><span class="line">  digitalWrite(red,LOW);</span><br><span class="line">  delay(2000);</span><br><span class="line">  digitalWrite(green,HIGH);</span><br><span class="line">  delay(5000); //允許行人通過的時間</span><br><span class="line">  <span class="keyword">for</span> (int x=0 ; x&lt;10 ; x++)&#123; //行人綠燈閃爍警告</span><br><span class="line">    digitalWrite(green,HIGH);</span><br><span class="line">    delay(250);</span><br><span class="line">    digitalWrite(green,LOW);</span><br><span class="line">    delay(250);</span><br><span class="line">    &#125;</span><br><span class="line">  digitalWrite(red,HIGH);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(carred,LOW);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(caryellow,HIGH);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(caryellow,LOW);</span><br><span class="line">  delay(1000);</span><br><span class="line">  digitalWrite(cargreen,HIGH);</span><br><span class="line">  changeTime = millis(); //回傳changeTime時間值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&gt; unsigned long changeTime;</p>
+<p>這是一個新的變量類型。我們之前，只用過”int”，它可以存放一個 -32768<br>到 32767 之間的整數。這次要創建的是一個 long 的變量类型，它可以存放一個<br>-2147483648 到 2147483647 之間的整數。而 unsigned long 則是不儲存負數，<br>所以儲存的範圍就從 0 到 4294967295.</p>
+<p>下圖是各種變量儲存種類和範圍<br><img src="http://c.biancheng.net/cpp/uploads/allimg/140316/1-1403161Z633114.png" alt="Image of data"></p>
+<p>&gt; digitalRead(button);</p>
+<p>讀取按鈕狀態</p>
+<p><pre><code><br>if(status == HIGH &amp;&amp; (millis() - changeTime)&gt; 5000) {<br> //呼叫changelight副程式<br> changelight();<br>}<br><code><pre></pre></code></code></pre></p>
+<p>&gt; millis()<br>是一個Arduino內建函数，它返回值是時間，<br>Arduino 開始計算執行程式到執行完畢的時間，也稱之為機器時間，就像一個隱形時鐘，從控制<br>器開始的那一刻起到結束回傳值，以毫秒為單位。</p>
+<p>&gt; 運算邏輯符號<br><img src="http://www.pcstar.com.tw/blog/wp-content/uploads/2013/08/3-45.jpg" alt="image of abc"></p>
+
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://morgan-hexo-theme.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="#"></a>
+            
+            
+                <a href="/web/2018/04/08/Arduino/" class="styled-border">
+                    
+                    Arguino入門
+                    →
+                </a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["Hello, this is my blog","歡迎來到謝秉軒的網誌"];
+</script>
+<script src="/web/js/script.js"></script>
+</body>
+</html>
