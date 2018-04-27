@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arduino 震動感測器 | 我的學習日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="12345678910111213141516171819202122int led = 13;int sensor = 2; //震動感測器unsigned char number = 0; //unsigned char = 255void setup() &amp;#123;  pinMode(led,OUTPUT);  pinMode(sensor,INPUT);  attachInterrupt">
+<meta name="keywords" content="Arduino">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino 震動感測器">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/27/Arduino3/index.html">
+<meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="12345678910111213141516171819202122int led = 13;int sensor = 2; //震動感測器unsigned char number = 0; //unsigned char = 255void setup() &amp;#123;  pinMode(led,OUTPUT);  pinMode(sensor,INPUT);  attachInterrupt">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://sites.google.com/a/jbps.ttct.edu.tw/zhi-ben-guo-xiaoarduino-yan-xi/_/rsrc/1459913936278/di-shi-san-ke-qing-xie-kai-guan-led-deng-pao/Ardulno%20SW-520D%20720.jpg?height=356&width=400">
+<meta property="og:updated_time" content="2018-04-27T14:38:32.668Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arduino 震動感測器">
+<meta name="twitter:description" content="12345678910111213141516171819202122int led = 13;int sensor = 2; //震動感測器unsigned char number = 0; //unsigned char = 255void setup() &amp;#123;  pinMode(led,OUTPUT);  pinMode(sensor,INPUT);  attachInterrupt">
+<meta name="twitter:image" content="https://sites.google.com/a/jbps.ttct.edu.tw/zhi-ben-guo-xiaoarduino-yan-xi/_/rsrc/1459913936278/di-shi-san-ke-qing-xie-kai-guan-led-deng-pao/Ardulno%20SW-520D%20720.jpg?height=356&width=400">
+  
+    <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/web/css/tocas.css">
+  <link rel="stylesheet" href="/web/css/animate.css">
+  <link rel="stylesheet" href="/web/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #5e5d5d;
+    }
+
+    #menu-color-id a{
+        color: #fffcfc;
+    }
+  </style>
+  <script src="/web/js/tocas.js"></script>
+  
+
+</head>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/web/">首頁</a>
+        
+            <a class="item" href="/web/archives">文章</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #49e5d5;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">我的學習日誌</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">Arduino 震動感測器</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/27 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <p><hr><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">int led = 13;</span><br><span class="line">int sensor = 2; //震動感測器</span><br><span class="line">unsigned char number = 0; //unsigned char = 255</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(led,OUTPUT);</span><br><span class="line">  pinMode(sensor,INPUT);</span><br><span class="line">  attachInterrupt(0,work,RISING); //中斷程式</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line"> <span class="keyword">if</span>(number!= 0)&#123;      //如果條件numder不等於0</span><br><span class="line">  number = 0;         // number=0</span><br><span class="line">  digitalWrite(led,HIGH); //led亮</span><br><span class="line">  delay(1000); //1秒</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">else</span>&#123;</span><br><span class="line">  digitalWrite(led,LOW);  //否則led滅</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">void <span class="function"><span class="title">work</span></span>()&#123;</span><br><span class="line">  number++;   //numder一直加</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>本篇最重要的觀念就是教大家何謂中斷程式，以及如何去使用它<br>中斷程式就是當狀況發生時，停止現在正在運行的程式，去執行中斷程式，等到狀況解除後再回來執行原本的程式</p>
+<p><font color="#FF0000">attachInterrupt()</font>就是中斷程式的語法<br>attachInterrupt(interrupt, function, mode)<br>interrupt:接腳，有0和1兩種，0對應的接腳為Pin2；1對應的接腳為Pin3<br>function:中斷程式的名稱<br>mode:狀態，說明感測器發生甚麼事時觸發中斷程式，只有以下四種情況<br>    LOW：當腳位為低電位時，觸發中斷<br>    CHANGE 當腳位電位發生改變時，觸發中斷<br>    RISING 當腳位從低電轉成高電位時，觸發中斷<br>    FALLING 當腳位從高電位轉為低電位時，觸發中斷<br><img src="https://sites.google.com/a/jbps.ttct.edu.tw/zhi-ben-guo-xiaoarduino-yan-xi/_/rsrc/1459913936278/di-shi-san-ke-qing-xie-kai-guan-led-deng-pao/Ardulno%20SW-520D%20720.jpg?height=356&width=400"></p>
+<hr>
+
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://morgan-hexo-theme.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="#"></a>
+            
+            
+                <a href="/web/2018/04/11/Arduino1/" class="styled-border">
+                    
+                    Arduino 紅綠燈呼吸燈練習
+                    →
+                </a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["Hello, this is my blog","歡迎來到謝秉軒的網誌"];
+</script>
+<script src="/web/js/script.js"></script>
+</body>
+</html>
