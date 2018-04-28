@@ -43,4 +43,4 @@ mode:狀態，說明感測器發生甚麼事時觸發中斷程式，只有以下
 <img src="https://sites.google.com/a/jbps.ttct.edu.tw/zhi-ben-guo-xiaoarduino-yan-xi/_/rsrc/1459913936278/di-shi-san-ke-qing-xie-kai-guan-led-deng-pao/Ardulno%20SW-520D%20720.jpg?height=356&width=400">
 
 
-<iframe class="imgur-embed" width="100%" height="540" frameborder="0" src="https://i.imgur.com/KoucSI5.gifv#embed"></iframe>
+<blockquote class="imgur-embed-pub" lang="en" data-id="KoucSI5"><a href="//imgur.com/KoucSI5"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
