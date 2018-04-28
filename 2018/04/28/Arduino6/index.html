@@ -5,18 +5,18 @@
   
   <title>Arduino手動旋轉伺服馬達 | 我的學習日誌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
+  <meta name="description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
 <meta name="keywords" content="Arduino">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arduino手動旋轉伺服馬達">
 <meta property="og:url" content="https://s40523146.github.io/web/2018/04/28/Arduino6/index.html">
 <meta property="og:site_name" content="我的學習日誌">
-<meta property="og:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
+<meta property="og:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-28T13:20:02.078Z">
+<meta property="og:updated_time" content="2018-04-28T13:48:17.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arduino手動旋轉伺服馬達">
-<meta name="twitter:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
+<meta name="twitter:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
   
     <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
   
@@ -105,8 +105,7 @@
                 </h1>
 
                 <p>我這邊先測了可變電阻所提供的數值範圍<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> Serial.begin(9600);</span><br><span class="line">&#125;</span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  Serial.println(val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<iframe class="imgur-embed" width="50%" height="480" frameborder="0" src="https://i.imgur.com/C6ySkg2.gifv#embed"></iframe>
-
+<p><blockquote class="imgur-embed-pub" lang="en" data-id="C6ySkg2"><a href="//imgur.com/C6ySkg2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
 <p>結果得知10k的可變電阻提供的數值範圍為0~1023</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;Servo.h&gt;</span></span><br><span class="line">Servo <span class="built_in">test</span>;</span><br><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> test.attach(8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  val=map(val,0,1023,0,180);</span><br><span class="line">  test.write(val);</span><br><span class="line">  delay(15);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>這裡主要講解map函式</p>
@@ -119,8 +118,7 @@
 <p>fromHigh：範圍值的上限</p>
 <p>toLow：目標範圍值的下限</p>
 <p>toHigh：目標範圍值的上限</p>
-<iframe class="imgur-embed" width="100%" height="540" frameborder="0" src="https://i.imgur.com/VgP6nbk.gifv#embed"></iframe>
-
+<p><blockquote class="imgur-embed-pub" lang="en" data-id="VgP6nbk"><a href="//imgur.com/VgP6nbk"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
 
             <!-- / the end of articles -->
         </div>
