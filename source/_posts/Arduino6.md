@@ -16,7 +16,7 @@ void loop() {
 }
 ```
 
-<iframe class="imgur-embed" width="50%" height="480" frameborder="0" src="https://i.imgur.com/C6ySkg2.gifv#embed"></iframe>
+<blockquote class="imgur-embed-pub" lang="en" data-id="C6ySkg2"><a href="//imgur.com/C6ySkg2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 結果得知10k的可變電阻提供的數值範圍為0~1023
 
@@ -57,5 +57,4 @@ toLow：目標範圍值的下限
 
 toHigh：目標範圍值的上限
 
-<iframe class="imgur-embed" width="100%" height="540" frameborder="0" src="https://i.imgur.com/VgP6nbk.gifv#embed"></iframe>
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="VgP6nbk"><a href="//imgur.com/VgP6nbk"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
