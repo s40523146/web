@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arduinon伺服馬達 | 我的學習日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1234567891011121314151617#include &amp;lt;Servo.h&amp;gt;Servo test;int pos = 0;void setup() &amp;#123; test.attach(8);&amp;#125;void loop() &amp;#123;  for(pos=0;pos&amp;lt;=180;pos+=1)&amp;#123;    test.write(pos);    delay(15">
+<meta name="keywords" content="Arduinon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduinon伺服馬達">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/28/Arduino5/index.html">
+<meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="1234567891011121314151617#include &amp;lt;Servo.h&amp;gt;Servo test;int pos = 0;void setup() &amp;#123; test.attach(8);&amp;#125;void loop() &amp;#123;  for(pos=0;pos&amp;lt;=180;pos+=1)&amp;#123;    test.write(pos);    delay(15">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://3.bp.blogspot.com/-knaHf-j01lY/VqTPy_NpH-I/AAAAAAAAAkI/yrObv7fwXiM/s1600/2016-01-24_202447.jpg">
+<meta property="og:image" content="http://fami3d.com/wp-content/uploads/2016/09/%E4%BC%BA%E6%9C%8D%E9%A6%AC%E9%81%94%EF%BC%8D%E7%9B%B8%E8%8B%A5%E6%96%BCTower-Pro-SG90.jpg">
+<meta property="og:image" content="https://i.screenshot.net/l2lvycq">
+<meta property="og:updated_time" content="2018-04-28T13:08:07.754Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arduinon伺服馬達">
+<meta name="twitter:description" content="1234567891011121314151617#include &amp;lt;Servo.h&amp;gt;Servo test;int pos = 0;void setup() &amp;#123; test.attach(8);&amp;#125;void loop() &amp;#123;  for(pos=0;pos&amp;lt;=180;pos+=1)&amp;#123;    test.write(pos);    delay(15">
+<meta name="twitter:image" content="http://3.bp.blogspot.com/-knaHf-j01lY/VqTPy_NpH-I/AAAAAAAAAkI/yrObv7fwXiM/s1600/2016-01-24_202447.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/web/css/tocas.css">
+  <link rel="stylesheet" href="/web/css/animate.css">
+  <link rel="stylesheet" href="/web/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #5e5d5d;
+    }
+
+    #menu-color-id a{
+        color: #fffcfc;
+    }
+  </style>
+  <script src="/web/js/tocas.js"></script>
+  
+
+</head>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/web/">首頁</a>
+        
+            <a class="item" href="/web/archives">文章</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #49e5d5;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">我的學習日誌</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">Arduinon伺服馬達</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/28 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduinon/">Arduinon</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;Servo.h&gt;</span></span><br><span class="line">Servo <span class="built_in">test</span>;</span><br><span class="line">int pos = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> test.attach(8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  <span class="keyword">for</span>(pos=0;pos&lt;=180;pos+=1)&#123;</span><br><span class="line">    test.write(pos);</span><br><span class="line">    delay(15);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(pos=180;pos&gt;=0;pos-=1)&#123;</span><br><span class="line">    test.write(pos);</span><br><span class="line">    delay(15);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>伺服馬達:伺服馬達和步進馬達最大的差異就是在伺服馬達驅動後會回傳脈波訊號，告訴控制端多轉了多少，並且自動補正</p>
+<pre><code>各有優缺點伺服馬達因為會不斷補正的因素，導致整個馬達會震動，那步進馬達就不會有這樣的問題，而且相較
+
+之下步進馬達也比較便宜
+</code></pre><p><font size="5">步進馬達</font><br><img src="http://3.bp.blogspot.com/-knaHf-j01lY/VqTPy_NpH-I/AAAAAAAAAkI/yrObv7fwXiM/s1600/2016-01-24_202447.jpg"></p>
+<p><font size="5">伺服馬達</font><br><img src="http://fami3d.com/wp-content/uploads/2016/09/%E4%BC%BA%E6%9C%8D%E9%A6%AC%E9%81%94%EF%BC%8D%E7%9B%B8%E8%8B%A5%E6%96%BCTower-Pro-SG90.jpg"></p>
+<p>伺服馬達總共有三條線，紅色的是接火線，棕色(黑色)的是接地線，橙色的是接訊號源</p>
+<p><font color="#FF0000" size="5">Servo.h</font>是一個Arduino內建的函式庫裏面包含伺服馬達相關的函式，我們第一行把它調出來使用</p>
+<p><font color="#FF0000">Servo test; </font>創建一個馬達名稱</p>
+<p><font color="#FF0000">test.attach(8); </font>這裡開始使用Servo中的函式了，和以前函式使用有點不同。這裡，我們要</p>
+<p>先指出對象的名稱，在指出函式的名稱</p>
+<p><img src="https://i.screenshot.net/l2lvycq"></p>
+
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://morgan-hexo-theme.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="/web/2018/04/28/Arduino6/" class="styled-border">
+                    ←
+                    Arduino手動旋轉伺服馬達
+                    
+                </a>
+            
+            
+                <a href="/web/2018/04/28/Arduino4/" class="styled-border">
+                    
+                    Arduino感光燈
+                    →
+                </a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["Hello, this is my blog","歡迎來到謝秉軒的網誌"];
+</script>
+<script src="/web/js/script.js"></script>
+</body>
+</html>

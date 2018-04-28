@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第四周報告 | 我的學習日誌</title>
+  <title>Arduino手動旋轉伺服馬達 | 我的學習日誌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="學習進度本周利用 http://mde.tw/vecp2018/lua/SchoolProject/嘗試在brython的環境底下練習python和lua的用法然後利用lua在vrep中執行運球車的程式，讓鋼球機構中的鋼球得以運送 為何選擇 Python 與 Lua 程式語言?在資料科學和機器學習領域最重要的兩大程式語言就是 Python 和 R，Python 簡潔易學、應用範圍廣且學習曲線平緩，">
-<meta name="keywords" content="2018scd">
+  <meta name="description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
+<meta name="keywords" content="Arduino">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四周報告">
-<meta property="og:url" content="https://s40523146.github.io/web/2018/04/01/week4report/index.html">
+<meta property="og:title" content="Arduino手動旋轉伺服馬達">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/28/Arduino6/index.html">
 <meta property="og:site_name" content="我的學習日誌">
-<meta property="og:description" content="學習進度本周利用 http://mde.tw/vecp2018/lua/SchoolProject/嘗試在brython的環境底下練習python和lua的用法然後利用lua在vrep中執行運球車的程式，讓鋼球機構中的鋼球得以運送 為何選擇 Python 與 Lua 程式語言?在資料科學和機器學習領域最重要的兩大程式語言就是 Python 和 R，Python 簡潔易學、應用範圍廣且學習曲線平緩，">
+<meta property="og:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-01T06:06:10.874Z">
+<meta property="og:updated_time" content="2018-04-28T13:20:02.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四周報告">
-<meta name="twitter:description" content="學習進度本周利用 http://mde.tw/vecp2018/lua/SchoolProject/嘗試在brython的環境底下練習python和lua的用法然後利用lua在vrep中執行運球車的程式，讓鋼球機構中的鋼球得以運送 為何選擇 Python 與 Lua 程式語言?在資料科學和機器學習領域最重要的兩大程式語言就是 Python 和 R，Python 簡潔易學、應用範圍廣且學習曲線平緩，">
+<meta name="twitter:title" content="Arduino手動旋轉伺服馬達">
+<meta name="twitter:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;   結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#inc">
   
     <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
   
@@ -96,20 +96,31 @@
             <!-- Articles -->
                 
                 <h1 class="ts header">
-                    <span style="color: #333;">第四周報告</span>
-                    <div class="sub header" style="color: #808080;">Publish: 2018/3/1 
+                    <span style="color: #333;">Arduino手動旋轉伺服馬達</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/28 
                      &nbsp;&nbsp;
-                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/2018scd/">2018scd</a></li></ul>
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
                     
                     </div>
                 </h1>
 
-                <h1 id="學習進度"><a href="#學習進度" class="headerlink" title="學習進度"></a>學習進度</h1><p>本周利用 <a href="">http://mde.tw/vecp2018/lua/SchoolProject/</a>嘗試在brython的環境底下練習python和lua的用法<br>然後利用lua在vrep中執行運球車的程式，讓鋼球機構中的鋼球得以運送</p>
-<h1 id="為何選擇-Python-與-Lua-程式語言"><a href="#為何選擇-Python-與-Lua-程式語言" class="headerlink" title="為何選擇 Python 與 Lua 程式語言?"></a>為何選擇 Python 與 Lua 程式語言?</h1><p>在資料科學和機器學習領域最重要的兩大程式語言就是 Python 和 R，Python 簡潔易學、應用範圍廣且學習曲線平緩，適合作為第一個入門的程式語言<br>，適合工程任務和需要和網路應用程式整合的專案</p>
-<p>至於 Lua 則是 V-rep 內建的 scripting 程式語言, 充分了解 Lua 的應用將有助於機械設計工程師在 V-rep 搭建機電資整合系統模型<br><a href="">https://s40523146.github.io/web/2018/03/31/lua/</a>&lt;”Lua基本語法”&gt;</p>
-<h1 id="學習影片"><a href="#學習影片" class="headerlink" title="學習影片"></a>學習影片</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/w9fkKEcZDMQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <p>我這邊先測了可變電阻所提供的數值範圍<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> Serial.begin(9600);</span><br><span class="line">&#125;</span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  Serial.println(val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<iframe class="imgur-embed" width="50%" height="480" frameborder="0" src="https://i.imgur.com/C6ySkg2.gifv#embed"></iframe>
 
-<h1 id="學習心得"><a href="#學習心得" class="headerlink" title="學習心得"></a>學習心得</h1><p>最近自己設一個github page用來記錄學習過程,在做的過程中，我發現我懂得真的不是很多，在這個日新月異的時代，如果不逼自己每天學一些東西<br>很快就會被時代淘汰，雖然我目前在學的這些東西，感覺好像都是在學皮毛，但是經過一段時間後這些概念都會幫助我實現以後的目標，把目標變成知識</p>
+<p>結果得知10k的可變電阻提供的數值範圍為0~1023</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;Servo.h&gt;</span></span><br><span class="line">Servo <span class="built_in">test</span>;</span><br><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> test.attach(8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  val=map(val,0,1023,0,180);</span><br><span class="line">  test.write(val);</span><br><span class="line">  delay(15);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>這裡主要講解map函式</p>
+<p>格式如下：<br>map(value, fromLow, fromHigh, toLow, toHigh)</p>
+<p>map 這個函數的作用是將一個範圍的數字映射到另一個範圍的數字</p>
+<p>也就是說，會將 fromLow 到 fromHigh 之間的值映射在 toLow 在 toHigh 之間</p>
+<p>map 函數參數：</p>
+<p>value：需要映射的值</p>
+<p>fromLow：範圍值的下限</p>
+<p>fromHigh：範圍值的上限</p>
+<p>toLow：目標範圍值的下限</p>
+<p>toHigh：目標範圍值的上限</p>
+<iframe class="imgur-embed" width="100%" height="540" frameborder="0" src="https://i.imgur.com/VgP6nbk.gifv#embed"></iframe>
+
 
             <!-- / the end of articles -->
         </div>
@@ -143,16 +154,12 @@
         <hr/>
         <div class="next-prev-post-section">
             
-                <a href="/web/2018/04/08/Arduino/" class="styled-border">
-                    ←
-                    Arguino入門
-                    
-                </a>
+                <a href="#"></a>
             
             
-                <a href="/web/2018/03/31/lua/" class="styled-border">
+                <a href="/web/2018/04/28/Arduino5/" class="styled-border">
                     
-                    lua practice
+                    Arduinon伺服馬達
                     →
                 </a>
             

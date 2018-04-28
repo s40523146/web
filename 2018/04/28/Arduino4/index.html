@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>week5 | 我的學習日誌</title>
+  <title>Arduino感光燈 | 我的學習日誌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="keywords" content="2018scd">
+  <meta name="description" content="1234567891011121314151617int led = 13;  //設定LED燈的接腳int val = 0;   //設定讀取光敏電阻的電壓值名稱void setup() &amp;#123;  pinMode(led,OUTPUT);  //設定LED燈為輸出  Serial.begin(9600);   //設定串口波特率&amp;#125;void loop() &amp;#123;  val">
+<meta name="keywords" content="Arduino">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week5">
-<meta property="og:url" content="https://s40523146.github.io/web/2018/03/31/week5/index.html">
+<meta property="og:title" content="Arduino感光燈">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/28/Arduino4/index.html">
 <meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="1234567891011121314151617int led = 13;  //設定LED燈的接腳int val = 0;   //設定讀取光敏電阻的電壓值名稱void setup() &amp;#123;  pinMode(led,OUTPUT);  //設定LED燈為輸出  Serial.begin(9600);   //設定串口波特率&amp;#125;void loop() &amp;#123;  val">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-31T15:50:49.322Z">
+<meta property="og:image" content="https://i.screenshot.net/p/pmjezt1?2a9966d6c2339dba61493ed01747708c">
+<meta property="og:image" content="https://i.screenshot.net/nze40uj">
+<meta property="og:image" content="https://i.screenshot.net/n6vk0aw">
+<meta property="og:updated_time" content="2018-04-28T11:38:31.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="week5">
+<meta name="twitter:title" content="Arduino感光燈">
+<meta name="twitter:description" content="1234567891011121314151617int led = 13;  //設定LED燈的接腳int val = 0;   //設定讀取光敏電阻的電壓值名稱void setup() &amp;#123;  pinMode(led,OUTPUT);  //設定LED燈為輸出  Serial.begin(9600);   //設定串口波特率&amp;#125;void loop() &amp;#123;  val">
+<meta name="twitter:image" content="https://i.screenshot.net/p/pmjezt1?2a9966d6c2339dba61493ed01747708c">
   
     <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
   
@@ -93,15 +100,23 @@
             <!-- Articles -->
                 
                 <h1 class="ts header">
-                    <span style="color: #333;">week5</span>
-                    <div class="sub header" style="color: #808080;">Publish: 2018/2/31 
+                    <span style="color: #333;">Arduino感光燈</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/28 
                      &nbsp;&nbsp;
-                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/2018scd/">2018scd</a></li></ul>
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
                     
                     </div>
                 </h1>
 
-                
+                <hr>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int led = 13;  //設定LED燈的接腳</span><br><span class="line">int val = 0;   //設定讀取光敏電阻的電壓值名稱</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(led,OUTPUT);  //設定LED燈為輸出</span><br><span class="line">  Serial.begin(9600);   //設定串口波特率</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val = analogRead(0);      //讀取電壓值</span><br><span class="line">  Serial.println(val);      //顯示在監控串口</span><br><span class="line">  <span class="keyword">if</span>(val&gt;1000)&#123;                 //如果電壓值大於1000</span><br><span class="line">    digitalWrite(led,HIGH);     //LED燈亮</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">    digitalWrite(led,LOW);      //否則LED熄滅</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>監控視窗</p>
+<p>還沒遮住光敏電阻時所讀出的數值<br><img src="https://i.screenshot.net/p/pmjezt1?2a9966d6c2339dba61493ed01747708c"></p>
+<p>已經遮住光敏電阻所讀出的數值<br><img src="https://i.screenshot.net/nze40uj"></p>
+<p>我們可以看到有沒有遮住所讀到的電壓值有明顯的差異，所以上面的if函式中的電壓值可以隨著測到的值做改變</p>
+<p><img src="https://i.screenshot.net/n6vk0aw"></p>
+<hr>
             <!-- / the end of articles -->
         </div>
         <!-- / left section -->
@@ -134,14 +149,18 @@
         <hr/>
         <div class="next-prev-post-section">
             
-                <a href="/web/2018/03/31/week1234/" class="styled-border">
+                <a href="/web/2018/04/28/Arduino5/" class="styled-border">
                     ←
-                    week 1234
+                    Arduinon伺服馬達
                     
                 </a>
             
             
-                <a href="#"></a>
+                <a href="/web/2018/04/27/Arduino3/" class="styled-border">
+                    
+                    Arduino 震動感測器
+                    →
+                </a>
             
         </div>
         
