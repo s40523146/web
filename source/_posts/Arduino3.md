@@ -3,7 +3,7 @@ title: Arduino 震動感測器
 date: 2018-04-27 22:00:21
 tags: Arduino
 ---
-<hr>
+
 ```bash
 int led = 13;
 int sensor = 2; //震動感測器
@@ -42,4 +42,4 @@ mode:狀態，說明感測器發生甚麼事時觸發中斷程式，只有以下
     FALLING 當腳位從高電位轉為低電位時，觸發中斷
 <img src="https://sites.google.com/a/jbps.ttct.edu.tw/zhi-ben-guo-xiaoarduino-yan-xi/_/rsrc/1459913936278/di-shi-san-ke-qing-xie-kai-guan-led-deng-pao/Ardulno%20SW-520D%20720.jpg?height=356&width=400">
 
-<hr>
+<iframe class="imgur-embed" width="100%" height="540" frameborder="0" src="https://i.imgur.com/KoucSI5.gifv#embed"></iframe>
