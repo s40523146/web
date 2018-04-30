@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Arduino手動旋轉伺服馬達 | 我的學習日誌</title>
+  <title>Arduino RGB燈 | 我的學習日誌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
+  <meta name="description" content="123456789101112131415161718192021int red = 10;int green = 9;int blue = 6;int rval = 0;int gval = 0;int bval = 0;void setup() &amp;#123;  pinMode(red,OUTPUT);  pinMode(green,OUTPUT);  pinMode(blue,OUTPUT);">
 <meta name="keywords" content="Arduino">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Arduino手動旋轉伺服馬達">
-<meta property="og:url" content="https://s40523146.github.io/web/2018/04/28/Arduino6/index.html">
+<meta property="og:title" content="Arduino RGB燈">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/30/Arduino8/index.html">
 <meta property="og:site_name" content="我的學習日誌">
-<meta property="og:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
+<meta property="og:description" content="123456789101112131415161718192021int red = 10;int green = 9;int blue = 6;int rval = 0;int gval = 0;int bval = 0;void setup() &amp;#123;  pinMode(red,OUTPUT);  pinMode(green,OUTPUT);  pinMode(blue,OUTPUT);">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-28T13:48:17.871Z">
+<meta property="og:updated_time" content="2018-04-30T09:15:11.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arduino手動旋轉伺服馬達">
-<meta name="twitter:description" content="我這邊先測了可變電阻所提供的數值範圍12345678int val = 0;void setup() &amp;#123; Serial.begin(9600);&amp;#125;void loop() &amp;#123;  val=analogRead(0);  Serial.println(val);&amp;#125;  結果得知10k的可變電阻提供的數值範圍為0~1023 12345678910111213#incl">
+<meta name="twitter:title" content="Arduino RGB燈">
+<meta name="twitter:description" content="123456789101112131415161718192021int red = 10;int green = 9;int blue = 6;int rval = 0;int gval = 0;int bval = 0;void setup() &amp;#123;  pinMode(red,OUTPUT);  pinMode(green,OUTPUT);  pinMode(blue,OUTPUT);">
   
     <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
   
@@ -96,29 +96,17 @@
             <!-- Articles -->
                 
                 <h1 class="ts header">
-                    <span style="color: #333;">Arduino手動旋轉伺服馬達</span>
-                    <div class="sub header" style="color: #808080;">Publish: 2018/3/28 
+                    <span style="color: #333;">Arduino RGB燈</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/30 
                      &nbsp;&nbsp;
                         <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
                     
                     </div>
                 </h1>
 
-                <p>我這邊先測了可變電阻所提供的數值範圍<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> Serial.begin(9600);</span><br><span class="line">&#125;</span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  Serial.println(val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><blockquote class="imgur-embed-pub" lang="en" data-id="C6ySkg2"><a href="//imgur.com/C6ySkg2"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
-<p>結果得知10k的可變電阻提供的數值範圍為0~1023</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;Servo.h&gt;</span></span><br><span class="line">Servo <span class="built_in">test</span>;</span><br><span class="line">int val = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line"> test.attach(8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  val=map(val,0,1023,0,180);</span><br><span class="line">  test.write(val);</span><br><span class="line">  delay(15);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>這裡主要講解map函式</p>
-<p>格式如下：<br>map(value, fromLow, fromHigh, toLow, toHigh)</p>
-<p>map 這個函數的作用是將一個範圍的數字映射到另一個範圍的數字</p>
-<p>也就是說，會將 fromLow 到 fromHigh 之間的值映射在 toLow 在 toHigh 之間</p>
-<p>map 函數參數：</p>
-<p>value：需要映射的值</p>
-<p>fromLow：範圍值的下限</p>
-<p>fromHigh：範圍值的上限</p>
-<p>toLow：目標範圍值的下限</p>
-<p>toHigh：目標範圍值的上限</p>
-<p><blockquote class="imgur-embed-pub" lang="en" data-id="VgP6nbk"><a href="//imgur.com/VgP6nbk"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
+                <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int red = 10;</span><br><span class="line">int green = 9;</span><br><span class="line">int blue = 6;</span><br><span class="line">int rval = 0;</span><br><span class="line">int gval = 0;</span><br><span class="line">int bval = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(red,OUTPUT);</span><br><span class="line">  pinMode(green,OUTPUT);</span><br><span class="line">  pinMode(blue,OUTPUT);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  rval=random(0,255);  //在0到225中隨機存取一個數字</span><br><span class="line">  gval=random(0,255);</span><br><span class="line">  bval=random(0,255);</span><br><span class="line">  analogWrite(red,rval);    //將存取的數字寫入led燈內</span><br><span class="line">  analogWrite(green,gval);</span><br><span class="line">  analogWrite(blue,bval);</span><br><span class="line">  delay(500);              //延遲半秒</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><font color="#FF0000">random(min,max)</font>這個函式是在一個範圍內存取隨機的數字，範圍就是括號中的最大值跟最小值</p>
+<p><blockquote class="imgur-embed-pub" lang="en" data-id="a/aKDadzl"><a href="//imgur.com/aKDadzl"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
 
             <!-- / the end of articles -->
         </div>
@@ -152,16 +140,12 @@
         <hr/>
         <div class="next-prev-post-section">
             
+                <a href="#"></a>
+            
+            
                 <a href="/web/2018/04/30/Arduino7/" class="styled-border">
-                    ←
+                    
                     Arduino彩色調光台
-                    
-                </a>
-            
-            
-                <a href="/web/2018/04/28/Arduino5/" class="styled-border">
-                    
-                    Arduinon伺服馬達
                     →
                 </a>
             
