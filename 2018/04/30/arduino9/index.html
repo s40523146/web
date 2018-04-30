@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arduino溫度感測氣&amp;蜂鳴器 | 我的學習日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="蜂鳴器1234567891011121314float sinval;       //小數點型的命令字元int tonval;void setup() &amp;#123;  pinMode(8,OUTPUT);&amp;#125;void loop() &amp;#123;  for(int x=0;x&amp;lt;=180;x++)&amp;#123;          //從0到180度執行完畢每次加一    sinval=s">
+<meta name="keywords" content="Arduino">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino溫度感測氣&amp;蜂鳴器">
+<meta property="og:url" content="https://s40523146.github.io/web/2018/04/30/arduino9/index.html">
+<meta property="og:site_name" content="我的學習日誌">
+<meta property="og:description" content="蜂鳴器1234567891011121314float sinval;       //小數點型的命令字元int tonval;void setup() &amp;#123;  pinMode(8,OUTPUT);&amp;#125;void loop() &amp;#123;  for(int x=0;x&amp;lt;=180;x++)&amp;#123;          //從0到180度執行完畢每次加一    sinval=s">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-30T15:30:58.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arduino溫度感測氣&amp;蜂鳴器">
+<meta name="twitter:description" content="蜂鳴器1234567891011121314float sinval;       //小數點型的命令字元int tonval;void setup() &amp;#123;  pinMode(8,OUTPUT);&amp;#125;void loop() &amp;#123;  for(int x=0;x&amp;lt;=180;x++)&amp;#123;          //從0到180度執行完畢每次加一    sinval=s">
+  
+    <link rel="alternate" href="/atom.xml" title="我的學習日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/web/css/tocas.css">
+  <link rel="stylesheet" href="/web/css/animate.css">
+  <link rel="stylesheet" href="/web/css/style.css">
+  <style type="text/css">
+    a.title-link:hover{
+        color: #34b2db !important;
+    }
+
+    a.title-link:active{
+        color: #2075c1 !important;
+    }
+
+    #menu-color-id{
+        background : #5e5d5d;
+    }
+
+    #menu-color-id a{
+        color: #fffcfc;
+    }
+  </style>
+  <script src="/web/js/tocas.js"></script>
+  
+
+</head>
+
+<body>
+<!-- navigation -->
+
+<div class="ts fluid basic link big menu" id="menu-color-id">
+
+    <!-- ejs : align to post page or index page -->
+        
+            <div class="ts very narrow container">
+        
+
+        
+            <a class="item" href="/web/">首頁</a>
+        
+            <a class="item" href="/web/archives">文章</a>
+        
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate" style="background-color: #49e5d5;">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
+        <!-- Title -->
+        <h1 class="ts eleven wide column header be-center-h1">
+            <span style="color: #404040;" id="big-title">我的學習日誌</span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+<!-- main section -->
+<div class="ts text container">
+        <!-- left section -->
+        <div class="column" style=" padding: 35px; ">
+            <!-- Articles -->
+                
+                <h1 class="ts header">
+                    <span style="color: #333;">Arduino溫度感測氣&amp;蜂鳴器</span>
+                    <div class="sub header" style="color: #808080;">Publish: 2018/3/30 
+                     &nbsp;&nbsp;
+                        <ul class="unstyled radius-tag -list"><li class="unstyled radius-tag -list-item"><a class="unstyled radius-tag -list-link" href="/web/tags/Arduino/">Arduino</a></li></ul>
+                    
+                    </div>
+                </h1>
+
+                <h1 id="蜂鳴器"><a href="#蜂鳴器" class="headerlink" title="蜂鳴器"></a>蜂鳴器</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> sinval;       //小數點型的命令字元</span><br><span class="line">int tonval;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(8,OUTPUT);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  <span class="keyword">for</span>(int x=0;x&lt;=180;x++)&#123;          //從0到180度執行完畢每次加一</span><br><span class="line">    sinval=sin(x*0.01744444);       //sin值需要徑度，所以要將角度換算</span><br><span class="line">    tonval=(sinval*1000)+2000;      //調整聲音頻率</span><br><span class="line">    tone(8,tonval);</span><br><span class="line">    delay(10);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<font color="#FF0000">float</font>是小數點型的宣告，因為sin值通常為有小數點的數字，所以命令字元使用float。<br><br><font color="#FF0000">tonval=(sinval*1000)+2000;</font>這裡我們先乘上1000，目的是不要讓蜂鳴器接收的頻率有小數點，我也不知道為甚麼沒有小數<br><br>點聲音會怪怪的，所以我們就按照教材給它乘1000，去除小數點，然後後面加2000目的是調整身聲音的頻率，加的數字越大，音調就越高；反之，聲音越低，就要<br><br>調小數字。<br><br><font color="#FF0000">tone(pin,tonval);</font>
+
+<p>下面我們來介紹 tone 先關的三個函式</p>
+<p>（1）tone(pin,frequency)</p>
+<p>Pin 就是連接到蜂鳴器的引腳，frequency 是以 Hz 為單位的頻率值。</p>
+<p>（2）tone(pin,frequency,duration)</p>
+<p>這裡有個 duration，它是以毫秒為單位，表示聲音長度的常數。如果沒有指定 duration，聲音就會一直持續到下一個頻率的聲音出現。</p>
+<p>（3）noTone(pin)</p>
+<p>noTone(pin)函式，結束所有聲音。</p>
+<h1 id="溫度感測器"><a href="#溫度感測器" class="headerlink" title="溫度感測器"></a>溫度感測器</h1><h2 id="先測試溫度感測器是否正常和電壓溫度換算值"><a href="#先測試溫度感測器是否正常和電壓溫度換算值" class="headerlink" title="先測試溫度感測器是否正常和電壓溫度換算值"></a>先測試溫度感測器是否正常和電壓溫度換算值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int val = 0;</span><br><span class="line">int t = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  Serial.begin(9600);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  t=val* (5/10.24);</span><br><span class="line">  Serial.println(t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>讀出值為60</p>
+<p><blockquote class="imgur-embed-pub" lang="en" data-id="a/rZFFFjz"><a href="//imgur.com/rZFFFjz"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
+<p>室溫為29度</p>
+<p><blockquote class="imgur-embed-pub" lang="en" data-id="a/g9sjXHN"><a href="//imgur.com/g9sjXHN"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></p>
+<p>換算公式如下</p>
+<font color="#FF0000">data = (double) val * (5/10.24);</font>
+
+<p>感測器傳出的是電壓值，它的範圍在 0~1023，總共5v，分給1024份等於一份有0.00488，因為每度 10mV，所以60*0.00488/0.01=29.28</p>
+<h2 id="然後在打上if-函式和加入剛剛的蜂鳴器程式及完成"><a href="#然後在打上if-函式和加入剛剛的蜂鳴器程式及完成" class="headerlink" title="然後在打上if()函式和加入剛剛的蜂鳴器程式及完成"></a>然後在打上if()函式和加入剛剛的蜂鳴器程式及完成</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> sinval;</span><br><span class="line">int tonval;</span><br><span class="line">int val = 0;</span><br><span class="line">int t = 0;</span><br><span class="line">void <span class="function"><span class="title">setup</span></span>() &#123;</span><br><span class="line">  pinMode(8,OUTPUT);</span><br><span class="line">  Serial.begin(9600);               //監控溫度狀況</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">loop</span></span>() &#123;</span><br><span class="line">  val=analogRead(0);</span><br><span class="line">  t=val* (5/10.24);</span><br><span class="line">  <span class="keyword">if</span>(t&gt;32)&#123;                         //如果溫度大於32度</span><br><span class="line">    <span class="keyword">for</span>(int x=0;x&lt;=180;x++)&#123;        //蜂鳴器就開始叫</span><br><span class="line">      sinval=sin(x*0.01744444);</span><br><span class="line">    tonval=(sinval*1000)+2000;</span><br><span class="line">    tone(8,tonval);</span><br><span class="line">    delay(10);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;   </span><br><span class="line">  Serial.println(t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <!-- / the end of articles -->
+        </div>
+        <!-- / left section -->
+        
+        
+            <hr/>
+            <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://morgan-hexo-theme.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+
+        <!-- Next Post and Prev Post -->
+        
+        <hr/>
+        <div class="next-prev-post-section">
+            
+                <a href="#"></a>
+            
+            
+                <a href="/web/2018/04/30/Arduino8/" class="styled-border">
+                    
+                    Arduino RGB燈
+                    →
+                </a>
+            
+        </div>
+        
+</div>
+<script type="text/javascript">
+    let img = document.getElementsByTagName("img");
+    for(let i = 0; i < img.length; i++){
+        img[i].className += " ts fluid image";
+    }
+</script>
+<!-- / main section -->
+
+<!-- copyright -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Powered by Hexo, Theme designs by @hpcslag.
+            <div class="smaller sub header">
+                Style-Framework Tocas-UI designs by @yamioldmel 
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / copyright -->
+<script type="text/javascript">
+    
+    const slogans = ["Hello, this is my blog","歡迎來到謝秉軒的網誌"];
+</script>
+<script src="/web/js/script.js"></script>
+</body>
+</html>
